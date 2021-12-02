@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-<head>
+            
+<head>  
+    <link href="{{asset('public/Menu/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('public/Menu/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('public/Menu/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{asset('public/Menu/css/price-range.css')}}" rel="stylesheet">
+    <link href="{{asset('public/Menu/css/animate.css')}}" rel="stylesheet">
+	<link href="{{asset('public/Menu/css/main.css')}}" rel="stylesheet">
+	<link href="{{asset('public/Menu/css/responsive.css')}}" rel="stylesheet">
+          
+    <link rel="shortcut icon" href="{{asset('public/Menu/images/ico/favicon.ico')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('public/Menu/images/ico/apple-touch-icon-144-precomposed.png')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('public/Menu/images/ico/apple-touch-icon-114-precomposed.png')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('public/Menu/images/ico/apple-touch-icon-72-precomposed.png')}}">
+    <link rel="apple-touch-icon-precomposed" href="{{asset('public/Menu/images/ico/apple-touch-icon-57-precomposed.png')}}">
+
+	<meta name="description" content="">
+    <meta name="author" content="">
 	<title>Web bán đồ ăn vặt</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,13 +37,13 @@
 	<!--// Meta tag Keywords -->
 
 	<!-- Custom-Files -->
-    <link rel="stylesheet" href="public/frontend/css/bootstrap.css">
+    <link rel="stylesheet" href="{{asset('public/frontend/css/bootstrap.css')}}">
     <!-- Bootstrap-Core-CSS -->
-    <link href="public/frontend/css/css_slider.css" type="text/css" rel="stylesheet" media="all">
+    <link href="{{asset('public/frontend/css/css_slider.css')}}" type="text/css" rel="stylesheet" media="all">
 	<!-- css slider -->
-    <link rel="stylesheet" href="public/frontend/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{asset('public/frontend/css/style.css')}}" type="text/css" media="all" />
 	<!-- Style-CSS -->
-    <link href="public/frontend/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{asset('public/frontend/css/font-awesome.min.css')}}" rel="stylesheet">
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //Custom-Files -->
 
@@ -96,7 +113,7 @@
 				<!-- logo -->
 				<h1>
 					<a id="logo" class="logo" href="{{ url('/trang-chu') }}">
-						<img src="public/frontend/images/logo.png" alt="" class="img-fluid"><span>24/7</span>Fasoo
+						<img src="{{asset('public/frontend/images/logo.png')}}" alt="" class="img-fluid"><span>24/7</span>Fasoo
 					</a>
 				</h1>
 				<!-- //logo -->
@@ -162,7 +179,7 @@
 					<!-- logo -->
 					<h2>
 						<a class="logo text-wh" href="{{ url('/trang-chu') }}">
-							<img src="public/frontend/images/logo2.png" alt="" class="img-fluid"><span>24/7</span>Fasoo
+							<img src="{{asset('public/frontend/images/logo2.png')}}" alt="" class="img-fluid"><span>24/7</span>Fasoo
 						</a>
 					</h2>
 					<!-- //logo -->	
@@ -281,6 +298,12 @@
 		<span class="fa fa-level-up" aria-hidden="true"></span>
 	</a>
 	<!-- //move top icon -->
+	<script src="{{asset('public/Menu/js/jquery.js')}}"></script>
+	<script src="{{asset('public/Menu/js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('public/Menu/js/jquery.scrollUp.min.js')}}"></script>
+	<script src="{{asset('public/Menu/js/price-range.js')}}"></script>
+    <script src="{{asset('public/Menu/js/jquery.prettyPhoto.js')}}"></script>
+    <script src="{{asset('public/Menu/js/main.js')}}"></script>
 
 </body>
 

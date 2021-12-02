@@ -18,18 +18,32 @@ Route::get('/','HomeController@index' );
 Route::get('/trang-chu','HomeController@index' );
 Route::get('/menu','HomeController@menuweb' );
 
+//Frontend: Danh muc san pham trang chu
+Route::get('/danh-muc-san-pham/{category_id}','CategoryProduct@show_category_home');
 
 
 //Backend
-Route::get('/admin_login','AdminController@index' );
-Route::get('/admin_pages','AdminController@show_adminpages');
-Route::get('/logout','AdminController@logout');
+Route::get('/admin','AdminController@index');
+Route::get('/dashboard','AdminController@show_dashboard');
 Route::get('/admin_dashboard','AdminController@dashboard');
+Route::get('/logout','AdminController@logout');
+
+
 
 //Category Product
 Route::get('/add-category-product','CategoryProduct@add_category_product');
+Route::get('/edit-category-product/{category_product_id}','CategoryProduct@edit_category_product');
+Route::get('/delete-category-product/{category_product_id}','CategoryProduct@delete_category_product');
 Route::get('/all-category-product','CategoryProduct@all_category_product');
+
+Route::get('/unactive-category-product/{category_product_id}','CategoryProduct@unactive_category_product');
+Route::get('/active-category-product/{category_product_id}','CategoryProduct@active_category_product');
+
+
 Route::post('/save-category-product','CategoryProduct@save_category_product');
+Route::post('/update-category-product/{category_product_id}','CategoryProduct@update_category_product');
+
+
 
 //Product
 Route::get('/add-product','ProductController@add_product');

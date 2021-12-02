@@ -24,10 +24,7 @@
                                 <input type="text" data-validation="length" data-validation-length="min10" data-validation-error-msg="Làm ơn điền ít nhất 10 ký tự" name="product_name" class="form-control " id="slug" placeholder="Tên danh mục" onkeyup="ChangeToSlug();"> 
                             </div>
 
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">SL sản phẩm</label>
-                                <input type="text" data-validation="number" data-validation-error-msg="Làm ơn điền số lượng" name="product_quantity" class="form-control" id="exampleInputEmail1" placeholder="Điền số lượng">
-                            </div>
+                           
                            
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Giá sản phẩm</label>
@@ -48,7 +45,16 @@
                                 <label for="exampleInputPassword1">Nội dung sản phẩm</label>
                                 <textarea style="resize: none" rows="8" class="form-control" name="product_content"  id="id4" placeholder="Nội dung sản phẩm"></textarea>
                             </div>
-                                             
+                            
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Danh mục sản phẩm</label>
+                                <select name="product_cate" class="form-control input-sm m-bot15">
+                                    @foreach($cate_product as $key => $cate)
+                                        <option value="{{$cate->category_id}}">{{$cate->category_name}}</option>
+                                    @endforeach                                            
+                                </select>
+                            </div>
+
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Hiển thị</label>
                                     <select name="product_status" class="form-control input-sm m-bot15">

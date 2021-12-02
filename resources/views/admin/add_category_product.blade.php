@@ -11,9 +11,18 @@
                 <header class="panel-heading">
                     Thêm danh mục sản phẩm
                 </header>
+                
                 <div class="panel-body">
+                    <?php
+                        $message = Session::get('message');
+                        if($message){
+                            echo '<span class="text-alert"> '.$message.' </span>' ;
+                            Session::put('message',null);
+                        }
+                    ?>
+
                     <div class="position-center">
-                        <form role="form" action="{{ url('/save-category-product') }}" method="post">
+                        <form role="form" action="{{ URL::to('/save-category-product') }}" method="post">
                             {{ csrf_field() }}
                         <div cla    s="form-group">
                             <label for="exampleInputEmail1">Tên danh mục</label>

@@ -7,24 +7,28 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
-<link rel="stylesheet" href="public/backend/css/bootstrap.min.css" >
+<link rel="stylesheet" href="{{asset('public/backend/css/bootstrap.min.css')}}" >
+
 <!-- //bootstrap-css -->
 <!-- Custom CSS -->
-<link href="public/backend/css/style.css" rel='stylesheet' type='text/css' />
-<link href="public/backend/css/style-responsive.css" rel="stylesheet"/>
+<link href="{{asset('public/backend/css/style.css')}}" rel='stylesheet' type='text/css' />
+<link href="{{asset('public/backend/css/style-responsive.css')}}" rel="stylesheet"/>
+<link href="{{asset('public/backend/css/jquery.dataTables.min.css')}}" rel="stylesheet"/>
 <!-- font CSS -->
 <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 <!-- font-awesome icons -->
-<link rel="stylesheet" href="public/backend/css/font.css" type="text/css"/>
-<link href="public/backend/css/font-awesome.css" rel="stylesheet"> 
-<link rel="stylesheet" href="public/backend/css/morris.css" type="text/css"/>
+<link rel="stylesheet" href="{{asset('public/backend/css/font.css')}}" type="text/css"/>
+<link href="{{asset('public/backend/css/font-awesome.css')}}" rel="stylesheet"> 
+<link rel="stylesheet" href="{{asset('public/backend/css/morris.css')}}" type="text/css"/>
+
 <!-- calendar -->
-<link rel="stylesheet" href="public/backend/css/monthly.css">
+<link rel="stylesheet" href="{{asset('public/backend/css/monthly.css')}}">
 <!-- //calendar -->
 <!-- //font-awesome icons -->
-<script src="public/backend/js/jquery2.0.3.min.js"></script>
-<script src="public/backend/js/raphael-min.js"></script>
-<script src="public/backend/js/morris.js"></script>
+<script src="{{asset('public/backend/js/jquery2.0.3.min.js')}}"></script>
+<script src="{{asset('public/backend/js/raphael-min.js')}}"></script>
+<script src="{{asset('public/backend/js/morris.js')}}"></script>
+
 </head>
 <body>
 <section id="container">
@@ -35,7 +39,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!--logo start-->
 <div class="brand">
-    <a href="index.html" class="logo">
+    <a href="{{ url('/dashboard') }}" class="logo">
         ADMIN
     </a>
     <div class="sidebar-toggle-box">
@@ -55,7 +59,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="public/backend/images/2.png">
-                <span class="username">admin</span>
+                <span class="username">
+                	<?php
+					$name = Session::get('admin_name');
+					if($name){
+						echo $name ;
+					}
+					?>             	
+                </span>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu extended logout">
@@ -133,14 +144,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </section>
 <!--main content end-->
 </section>
-<script src="public/backend/js/bootstrap.js"></script>
-<script src="public/backend/js/jquery.dcjqaccordion.2.7.js"></script>
-<script src="public/backend/js/scripts.js"></script>
-<script src="public/backend/js/jquery.slimscroll.js"></script>
-<script src="public/backend/js/jquery.nicescroll.js"></script>
-<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="{{asset('public/backend/js/bootstrap.js')}}"></script>
+<script src="{{asset('public/backend/js/jquery.dcjqaccordion.2.7.js')}}"></script>
+<script src="{{asset('public/backend/js/scripts.js')}}"></script>
+<script src="{{asset('public/backend/js/jquery.slimscroll.js')}}"></script>
+<script src="{{asset('public/backend/js/jquery.nicescroll.js')}}"></script>
+<script src="{{asset('public/backend/ckeditor/ckeditor.js')}}"></script>
+<script src="{{asset('public/backend/js/jquery.form-validator.min.js')}}"></script>
+<script src="{{asset('public/backend/js/jquery.dataTables.min.js')}}"></script>
+<script type="text/javascript">
 <script src="public/backend/js/jquery.scrollTo.js"></script>
-<!-- morris JavaScript -->	
+
 <script>
 	$(document).ready(function() {
 		//BOX BUTTON SHOW AND CLOSE
